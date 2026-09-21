@@ -1,0 +1,122 @@
+{
+  "course": {
+    "code": "Pure Math Unit 2",
+    "title": "Pure Mathematics",
+    "subtitle": "Unit 2",
+    "institution": "Clarence Fitzroy Bryant College",
+    "term": "Semester 1",
+    "announcement": ""
+  },
+  "resources": [],
+  "generatedAt": "2026-09-21T01:37:15.661Z",
+  "sourceBin": "6ab08678ffd5d160531dc2fb",
+  "topicCount": 2,
+  "failures": 0,
+  "topics": [
+    {
+      "id": "differentiation",
+      "url": "https://enoete.github.io/puremathu2_1/",
+      "title": "Differentiation",
+      "blurb": "Everything in Chapter 2, in the order you need it: how to recognise what you",
+      "number": 1,
+      "status": "live",
+      "tags": [
+        "Standard results",
+        "Chain rule",
+        "Product rule",
+        "Quotient rule",
+        "Logarithmic differentiation",
+        "Trigonometric differentiation",
+        "Inverse trig functions",
+        "Tangents and normals",
+        "Implicit differentiation",
+        "Parametric differentiation",
+        "Partial derivatives"
+      ],
+      "accent": "#2557D6",
+      "icon": "",
+      "meta": {
+        "title": "Differentiation",
+        "description": "Everything in Chapter 2, in the order you need it: how to recognise what you",
+        "image": "",
+        "siteName": "Pure Math Unit 2 · CFBC",
+        "themeColor": "#2557D6",
+        "duration": "150 min",
+        "difficulty": "Core",
+        "objectives": "14",
+        "questions": "24",
+        "topics": [
+          "Standard results",
+          "Chain rule",
+          "Product rule",
+          "Quotient rule",
+          "Logarithmic differentiation",
+          "Trigonometric differentiation",
+          "Inverse trig functions",
+          "Tangents and normals",
+          "Implicit differentiation",
+          "Parametric differentiation",
+          "Partial derivatives"
+        ],
+        "activities": [
+          "Decision table",
+          "Flip-card drill",
+          "Name-the-technique drill",
+          "Guided dissections",
+          "Study checklist",
+          "Self-test"
+        ],
+        "sections": 8,
+        "updated": "2026-09-21"
+      },
+      "fetchedAt": "2026-09-21T01:37:15.570Z"
+    },
+    {
+      "id": "differentiation-classwork",
+      "url": "https://enoete.github.io/puremathu2_2/",
+      "title": "Differentiation Classwork",
+      "blurb": "Eight questions spanning the whole chapter, adapted from previous test papers — hints, full working and answers on every question.",
+      "number": 2,
+      "status": "live",
+      "tags": [
+        "Log laws",
+        "Chain rule",
+        "Quotient rule",
+        "Product rule",
+        "Implicit differentiation",
+        "Parametric differentiation",
+        "Partial derivatives"
+      ],
+      "accent": "#6B30D9",
+      "icon": "",
+      "meta": {
+        "title": "Differentiation Classwork",
+        "description": "Eight questions spanning the whole chapter, adapted from previous test papers — hints, full working and answers on every question.",
+        "image": "",
+        "siteName": "Pure Math Unit 2 · CFBC",
+        "themeColor": "#2557D6",
+        "duration": "70 min",
+        "difficulty": "Core",
+        "objectives": "7",
+        "questions": "8",
+        "topics": [
+          "Log laws",
+          "Chain rule",
+          "Quotient rule",
+          "Product rule",
+          "Implicit differentiation",
+          "Parametric differentiation",
+          "Partial derivatives"
+        ],
+        "activities": [
+          "Technique drill",
+          "Applied differentiation",
+          "Partial differentiation"
+        ],
+        "sections": 3,
+        "updated": "2026-09-21"
+      },
+      "fetchedAt": "2026-09-21T01:37:15.661Z"
+    }
+  ]
+}
