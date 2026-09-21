@@ -36,7 +36,7 @@
       "host": "enoete.github.io"
     }
   ],
-  "generatedAt": "2026-09-21T01:47:38.273Z",
+  "generatedAt": "2026-09-21T02:03:27.146Z",
   "sourceBin": "6ab08678ffd5d160531dc2fb",
   "topicCount": 2,
   "failures": 0,
@@ -97,7 +97,7 @@
         "sections": 8,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T01:47:38.156Z"
+      "fetchedAt": "2026-09-21T02:03:26.821Z"
     },
     {
       "id": "differentiation-classwork",
@@ -144,7 +144,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T01:47:38.191Z"
+      "fetchedAt": "2026-09-21T02:03:26.916Z"
     }
   ]
 }
