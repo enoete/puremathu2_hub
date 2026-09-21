@@ -11,13 +11,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#EDF1F0; --card:#FFFFFF; --grid:#D8E0DF;
-  --ink:#12262C; --ink2:#41565D; --ink3:#6B7F85;
-  --wire:#1668D8; --wire-soft:#DEEAFB;
-  --live:#D97706; --live-soft:#FDF0DC;
-  --ok:#0F7A5A; --ok-soft:#DDF0E9;
+  --paper:#F4EEDF; --card:#FFFCF3; --grid:#E3D7B8;
+  --ink:#241A33; --ink2:#5A5170; --ink3:#8C82A0;
+  --wire:#8B2E3B; --wire-soft:#F3E3DE;
+  --live:#1F6F52; --live-soft:#E1F0E6;
+  --ok:#1F6F52; --ok-soft:#E1F0E6;
   --bad:#BC3A2C;
-  --r:4px;
+  --gold:#C0962C; --gold-soft:#F7EDD3;
+  --r:3px;
   --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
   --ui:"Space Grotesk",system-ui,-apple-system,sans-serif;
   --serif:"Source Serif 4",Georgia,serif;
@@ -30,10 +31,11 @@ body{
   background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
   background-size:28px 28px;
 }
-h1,h2,h3,.ui{font-family:var(--ui)}
+h1,h2,h3{font-family:var(--serif); font-weight:700}
+.ui{font-family:var(--ui)}
 a{color:inherit; text-decoration:none}
 .wrap{max-width:1040px; margin:0 auto; padding:0 20px}
-:focus-visible{outline:3px solid var(--live); outline-offset:2px}
+:focus-visible{outline:3px solid var(--gold); outline-offset:2px}
 
 /* ---------- masthead ---------- */
 .mast{padding:20px 0 0}
@@ -46,27 +48,29 @@ a{color:inherit; text-decoration:none}
 .mast-inst{color:var(--ink2); font-size:.88rem; font-family:var(--ui)}
 
 /* ---------- hero ---------- */
-.hero{padding:40px 0 44px; border-bottom:2px solid var(--ink)}
-.hero-top{display:flex; gap:36px; flex-wrap:wrap; align-items:flex-start}
+.hero{padding:40px 0 44px; border-bottom:2px solid var(--ink); position:relative; overflow:hidden}
+.wm{position:absolute; top:-18px; right:26px; font-family:var(--serif); font-style:italic; font-size:9.5rem; line-height:1; color:var(--gold); opacity:.13; pointer-events:none; user-select:none}
+.hero-top{display:flex; gap:36px; flex-wrap:wrap; align-items:flex-start; position:relative}
 .hero-text{flex:1 1 340px; min-width:280px}
 .hero h1{
   font-size:clamp(2.1rem,6vw,3.6rem); font-weight:700; line-height:1.02;
-  letter-spacing:-.03em; margin:0;
+  letter-spacing:-.01em; margin:0;
 }
-.hero h1 .u{display:block; color:var(--wire)}
+.hero h1 .u{display:block; color:var(--wire); font-style:italic}
 .hero p.tag{max-width:48ch; color:var(--ink2); margin:16px 0 0; font-size:1.04rem; font-family:var(--serif)}
 .stats{display:flex; gap:26px; flex-wrap:wrap; margin-top:22px}
 .stat b{font-family:var(--mono); font-size:1.5rem; display:block; line-height:1; color:var(--ink)}
 .stat span{font-size:.78rem; color:var(--ink2); font-family:var(--ui)}
 
 /* hero curve + tangent animation — the slope sweeping across a function */
-.curveviz{flex:0 0 auto; width:170px}
+.curveviz{flex:0 0 auto; width:170px; position:relative}
 .cv-frame{border:2px solid var(--ink); border-radius:var(--r); background:var(--card); padding:12px; text-align:center}
-.cv-label{font-family:var(--mono); font-size:.68rem; color:var(--ink3); margin-bottom:8px}
+.cv-label{font-family:var(--serif); font-style:italic; font-size:.72rem; color:var(--ink3); margin-bottom:8px}
 .cv-svg{width:100%; height:auto; display:block}
+.cv-axis{stroke:var(--ink3); stroke-width:1; stroke-dasharray:1 3; opacity:.6}
 .cv-curve{fill:none; stroke:var(--ink); stroke-width:2.5; stroke-linecap:round}
 .cv-tangent{stroke:var(--wire); stroke-width:2.5; stroke-linecap:round}
-.cv-dot{fill:var(--wire)}
+.cv-dot{fill:var(--gold); stroke:var(--wire); stroke-width:1.5}
 @media (prefers-reduced-motion:no-preference){
   .cv-rig{animation:sweep 7s cubic-bezier(.4,0,.2,1) infinite alternate; transform-box:fill-box; transform-origin:center}
 }
@@ -112,11 +116,14 @@ a{color:inherit; text-decoration:none}
 }
 a.card:hover{transform:translateY(-2px); box-shadow:5px 6px 0 var(--accent,var(--ink))}
 .card .num{
-  display:flex; flex-direction:column; align-items:center; justify-content:center;
-  background:var(--accent,var(--ink)); color:#fff;
-  font-family:var(--mono); font-weight:700; font-size:1.3rem;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px;
+  background:var(--card); color:var(--accent,var(--wire));
+  font-family:var(--serif); font-style:italic; font-weight:700; font-size:1.55rem;
+  border-right:2px solid var(--ink); position:relative;
 }
-.card .num small{display:block; font-size:.55rem; font-weight:500; letter-spacing:.08em; opacity:.85; font-family:var(--ui)}
+.card .num::before,.card .num::after{content:"";position:absolute; left:9px; right:9px; height:2px; background:var(--accent,var(--wire))}
+.card .num::before{top:9px} .card .num::after{bottom:9px}
+.card .num small{display:block; font-size:.5rem; font-weight:600; letter-spacing:.1em; opacity:.8; font-family:var(--ui); font-style:normal; color:var(--ink2)}
 .card .body{padding:18px 20px}
 .card h3{font-size:1.18rem; margin:0 0 6px; font-weight:700; letter-spacing:-.01em}
 .card p{margin:0; color:var(--ink2); font-size:.95rem; font-family:var(--serif)}
@@ -132,16 +139,16 @@ a.card:hover{transform:translateY(-2px); box-shadow:5px 6px 0 var(--accent,var(-
 /* ---------- sticky resources bar ---------- */
 .resbar{position:sticky; top:0; z-index:60; background:var(--ink); border-bottom:2px solid var(--ink)}
 .resbar-in{display:flex; align-items:center; gap:11px; padding:9px 20px}
-.resbar-label{flex:0 0 auto; font-family:var(--mono); font-weight:700; font-size:.74rem; color:#8FD9BB; white-space:nowrap}
+.resbar-label{flex:0 0 auto; font-family:var(--serif); font-style:italic; font-weight:700; font-size:.8rem; color:var(--gold); white-space:nowrap}
 .resbar-scroll{display:flex; flex-wrap:wrap; gap:8px 8px; padding:2px 2px 3px; flex:1 1 auto; min-width:0}
 .rchip{
   flex:0 0 auto; display:flex; align-items:baseline; gap:6px; text-decoration:none;
-  background:#1B3138; border:1px solid #2A454D; border-radius:999px; padding:6px 12px;
-  font-size:.82rem; font-weight:500; color:#DDE8EA; white-space:nowrap; font-family:var(--ui);
+  background:#33253F; border:1px solid #48374F; border-radius:999px; padding:6px 12px;
+  font-size:.82rem; font-weight:500; color:#EDE3E5; white-space:nowrap; font-family:var(--ui);
   border-left:3px solid var(--accent,var(--wire));
 }
-.rchip:hover{background:#22404A}
-.rchip .k{font-size:.66rem; color:#8FA9AF; font-family:var(--mono)}
+.rchip:hover{background:#3D2C4A}
+.rchip .k{font-size:.66rem; color:#B7A6C2; font-family:var(--mono)}
 
 /* ---------- states ---------- */
 .msg{background:var(--card); border:2px dashed var(--ink3); border-radius:var(--r); padding:32px; text-align:center; color:var(--ink2); font-family:var(--ui)}
@@ -156,9 +163,11 @@ code.stamp{font-family:var(--mono); font-size:.74rem}
 
 @media (max-width:640px){
   .hero-top{flex-direction:column}
+  .wm{font-size:6rem; top:-6px; right:6px}
   .curveviz{width:130px}
   .card{grid-template-columns:1fr}
-  .card .num{flex-direction:row; gap:6px; padding:8px}
+  .card .num{flex-direction:row; gap:6px; padding:8px; border-right:none; border-bottom:2px solid var(--ink)}
+  .card .num::before,.card .num::after{display:none}
   .resbar-label{display:none}
   .rchip{padding:5px 10px; font-size:.78rem}
 }
@@ -181,6 +190,7 @@ code.stamp{font-family:var(--mono); font-size:.74rem}
 </nav>
 
 <section class="hero">
+  <span class="wm" aria-hidden="true">&int;</span>
   <div class="wrap hero-top">
     <div class="hero-text">
       <h1 id="h1">Data<span class="u" id="h1u">Structures</span></h1>
@@ -195,6 +205,8 @@ code.stamp{font-family:var(--mono); font-size:.74rem}
       <div class="cv-frame">
         <div class="cv-label">f&prime;(x) &mdash; the slope, everywhere</div>
         <svg class="cv-svg" viewBox="0 0 200 140" aria-hidden="true">
+          <line class="cv-axis" x1="8" y1="122" x2="192" y2="122"/>
+          <line class="cv-axis" x1="14" y1="130" x2="14" y2="4"/>
           <path class="cv-curve" d="M20,116 Q100,-76 180,116"/>
           <g class="cv-rig">
             <line class="cv-tangent" x1="-26" y1="0" x2="26" y2="0"/>
