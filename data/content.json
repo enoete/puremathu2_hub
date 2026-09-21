@@ -36,9 +36,9 @@
       "host": "enoete.github.io"
     }
   ],
-  "generatedAt": "2026-09-21T14:08:11.597Z",
+  "generatedAt": "2026-09-21T18:22:51.377Z",
   "sourceBin": "6ab08678ffd5d160531dc2fb",
-  "topicCount": 10,
+  "topicCount": 12,
   "failures": 0,
   "topics": [
     {
@@ -99,7 +99,7 @@
         "sections": 8,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T14:08:10.062Z"
+      "fetchedAt": "2026-09-21T18:22:50.038Z"
     },
     {
       "id": "differentiation-classwork",
@@ -148,7 +148,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T14:08:10.228Z"
+      "fetchedAt": "2026-09-21T18:22:50.101Z"
     },
     {
       "id": "partial-fractions",
@@ -209,7 +209,7 @@
         "sections": 9,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T14:08:10.371Z"
+      "fetchedAt": "2026-09-21T18:22:50.214Z"
     },
     {
       "id": "partial-fractions-classwork",
@@ -256,7 +256,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T14:08:10.478Z"
+      "fetchedAt": "2026-09-21T18:22:50.291Z"
     },
     {
       "id": "integration",
@@ -324,7 +324,7 @@
         "sections": 11,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T14:08:10.654Z"
+      "fetchedAt": "2026-09-21T18:22:50.411Z"
     },
     {
       "id": "integration-classwork",
@@ -369,7 +369,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T14:08:10.742Z"
+      "fetchedAt": "2026-09-21T18:22:50.476Z"
     },
     {
       "id": "reduction-formulae",
@@ -425,7 +425,7 @@
         "sections": 9,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T14:08:10.847Z"
+      "fetchedAt": "2026-09-21T18:22:50.595Z"
     },
     {
       "id": "reduction-formulae-classwork",
@@ -470,7 +470,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T14:08:10.990Z"
+      "fetchedAt": "2026-09-21T18:22:50.658Z"
     },
     {
       "id": "trapezium-rule",
@@ -526,7 +526,7 @@
         "sections": 11,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T14:08:11.157Z"
+      "fetchedAt": "2026-09-21T18:22:50.826Z"
     },
     {
       "id": "trapezium-rule-classwork",
@@ -571,7 +571,109 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T14:08:11.278Z"
+      "fetchedAt": "2026-09-21T18:22:50.918Z"
+    },
+    {
+      "id": "complex-numbers",
+      "url": "https://enoete.github.io/puremathu2_11/",
+      "title": "Complex Numbers",
+      "blurb": "The algebra of i, the Argand plane, the four standard loci, and the greatest-and-least questions that catch almost everyone — a draggable plane lab, three drills, and a 31-question self-test.",
+      "number": 6,
+      "status": "live",
+      "tags": [
+        "Powers of i",
+        "Complex arithmetic",
+        "Conjugates and division",
+        "Comparing real and imaginary parts",
+        "Conjugate root pairs",
+        "Modulus and argument",
+        "Cartesian polar and exponential form",
+        "De Moivre"
+      ],
+      "accent": "#C81E78",
+      "icon": "",
+      "kind": "",
+      "of": "",
+      "meta": {
+        "title": "Complex Numbers",
+        "description": "The algebra of i, the Argand plane, the four standard loci, and the greatest-and-least questions that catch almost everyone — a draggable plane lab, three drills, and a 31-question self-test.",
+        "image": "",
+        "siteName": "Pure Math Unit 2 · CFBC",
+        "themeColor": "#C81E78",
+        "duration": "160 min",
+        "difficulty": "Core",
+        "objectives": "20",
+        "questions": "31",
+        "topics": [
+          "Powers of i",
+          "Complex arithmetic",
+          "Conjugates and division",
+          "Comparing real and imaginary parts",
+          "Conjugate root pairs",
+          "Modulus and argument",
+          "Cartesian polar and exponential form",
+          "De Moivre"
+        ],
+        "activities": [
+          "Argand plane lab",
+          "Argument trap drill",
+          "Name the locus drill",
+          "Guided dissections",
+          "Revision toolkit",
+          "Study checklist",
+          "Self-test"
+        ],
+        "sections": 12,
+        "updated": "2026-09-21"
+      },
+      "fetchedAt": "2026-09-21T18:22:51.048Z"
+    },
+    {
+      "id": "complex-numbers-classwork",
+      "url": "https://enoete.github.io/puremathu2_12/",
+      "title": "Complex Numbers Classwork",
+      "blurb": "Eleven questions spanning the whole chapter — the algebra, the Argand-plane picture, and the loci, regions and greatest-and-least questions where most of the marks sit, with hints, full working and answers on every question.",
+      "number": 6,
+      "status": "live",
+      "tags": [
+        "Complex arithmetic",
+        "Conjugates and division",
+        "Modulus and argument",
+        "Standard loci",
+        "Regions and inequalities",
+        "Greatest and least modulus and argument"
+      ],
+      "accent": "#D1510A",
+      "icon": "",
+      "kind": "classwork",
+      "of": "complex-numbers",
+      "meta": {
+        "title": "Complex Numbers Classwork",
+        "description": "Eleven questions spanning the whole chapter — the algebra, the Argand-plane picture, and the loci, regions and greatest-and-least questions where most of the marks sit, with hints, full working and answers on every question.",
+        "image": "",
+        "siteName": "Pure Math Unit 2 · CFBC",
+        "themeColor": "#D1510A",
+        "duration": "120 min",
+        "difficulty": "Core",
+        "objectives": "11",
+        "questions": "11",
+        "topics": [
+          "Complex arithmetic",
+          "Conjugates and division",
+          "Modulus and argument",
+          "Standard loci",
+          "Regions and inequalities",
+          "Greatest and least modulus and argument"
+        ],
+        "activities": [
+          "Worked questions",
+          "Step-by-step checks",
+          "Full answers"
+        ],
+        "sections": 3,
+        "updated": "2026-09-21"
+      },
+      "fetchedAt": "2026-09-21T18:22:51.115Z"
     }
   ]
 }
