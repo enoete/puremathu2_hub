@@ -116,10 +116,10 @@ a{color:inherit; text-decoration:none}
 .card{
   display:grid; grid-template-columns:64px 1fr; gap:0; align-items:stretch;
   background:var(--card); border:1px solid var(--grid); border-radius:var(--r);
-  text-decoration:none; overflow:hidden; box-shadow:var(--shadow);
+  overflow:hidden; box-shadow:var(--shadow);
   transition:transform .12s ease, box-shadow .12s ease;
 }
-a.card:hover{transform:translateY(-3px); box-shadow:0 6px 16px -6px var(--accent,var(--wire)),0 22px 40px -24px rgba(21,24,39,.35)}
+.card:hover{transform:translateY(-3px); box-shadow:0 6px 16px -6px var(--accent,var(--wire)),0 22px 40px -24px rgba(21,24,39,.35)}
 .card .num{
   display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px;
   background:var(--accent,var(--wire)); color:#fff;
@@ -134,7 +134,14 @@ a.card:hover{transform:translateY(-3px); box-shadow:0 6px 16px -6px var(--accent
 .fact.k{font-family:var(--mono); color:var(--ink)}
 .tags{display:flex; gap:5px; flex-wrap:wrap; margin-top:9px}
 .tg{font-size:.71rem; color:var(--wire); background:var(--wire-soft); border-radius:3px; padding:2px 7px; font-family:var(--mono)}
-.go{margin-top:12px; display:inline-block; font-weight:600; font-size:.87rem; font-family:var(--ui); color:var(--accent,var(--wire)); border-bottom:2px solid currentColor; padding-bottom:1px}
+.actions{display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-top:14px}
+.go{display:inline-block; text-decoration:none; font-weight:600; font-size:.87rem; font-family:var(--ui); color:var(--accent,var(--wire)); border-bottom:2px solid currentColor; padding-bottom:1px}
+.go.companion{
+  display:inline-flex; align-items:center; gap:7px; font-weight:500; font-size:.82rem; border-bottom:none;
+  background:var(--paper); border:1px solid var(--grid); border-radius:999px; padding:5px 12px 5px 9px; color:var(--ink2);
+}
+.go.companion:hover{background:var(--grid); color:var(--ink)}
+.go.companion .dot{width:7px; height:7px; border-radius:50%; background:var(--c-accent,var(--wire)); flex:none}
 .entry.soon .card, .entry.locked .card{opacity:.6}
 .ribbon{display:inline-block; font-size:.7rem; font-weight:600; background:var(--paper); border:1px solid var(--grid); color:var(--ink2); padding:2px 8px; border-radius:3px; margin-left:7px; vertical-align:middle; font-family:var(--ui)}
 
@@ -320,15 +327,30 @@ function matches(t, q) {
   return hay.includes(q);
 }
 
+// A "classwork"/practice page can carry kind:"classwork" + of:"<parent id>"
+// so the hub nests it as a companion link on its parent's card instead of
+// listing it as its own independent topic — there are only as many real
+// topics as there are chapters, not as many as there are pages.
+function primaries() {
+  return DATA.topics.filter(t => (t.kind || '') !== 'classwork');
+}
+function companionOf(id) {
+  return DATA.topics.find(t => t.kind === 'classwork' && t.of === id);
+}
+
 function render() {
   const q = $('#q').value.trim().toLowerCase();
-  const list = DATA.topics
-    .filter(t => matches(t, q))
+  const groups = primaries();
+  const list = groups
+    .filter(t => {
+      const c = companionOf(t.id);
+      return matches(t, q) || (c && matches(c, q));
+    })
     .sort((a, b) => (a.number || 0) - (b.number || 0));
 
-  $('#countLabel').textContent = `${list.length} of ${DATA.topics.length}`;
+  $('#countLabel').textContent = `${list.length} of ${groups.length}`;
 
-  if (!DATA.topics.length) {
+  if (!groups.length) {
     $('#board').innerHTML = `<div class="msg"><b>No topics yet</b>${esc(
       CFG.labels?.emptyState || 'Topics appear here as soon as they are added to the course bin.')}</div>`;
     return;
@@ -337,10 +359,10 @@ function render() {
     $('#board').innerHTML = `<div class="msg"><b>Nothing matches that</b>Try a different word, or clear the filter.</div>`;
     return;
   }
-  $('#board').innerHTML = list.map(card).join('');
+  $('#board').innerHTML = list.map(t => card(t, companionOf(t.id))).join('');
 }
 
-function card(t) {
+function card(t, companion) {
   const m = t.meta || {};
   const accent = t.accent || 'var(--wire)';
   const live = (t.status || 'live') === 'live';
@@ -351,6 +373,12 @@ function card(t) {
   if (m.questions) facts.push(['k', m.questions + ' questions']);
   if (m.objectives) facts.push(['', m.objectives + ' objectives']);
 
+  const companionLink = companion && companion.url && (companion.status || 'live') === 'live'
+    ? `<a class="go companion" href="${esc(companion.url)}" style="--c-accent:${esc(companion.accent || 'var(--wire)')}">
+        <span class="dot" aria-hidden="true"></span>Practice: ${esc(companion.title)} &rarr;
+      </a>`
+    : '';
+
   const inner = `
     <div class="num" style="--accent:${esc(accent)}">${String(t.number).padStart(2, '0')}<small>TOPIC</small></div>
     <div class="body">
@@ -360,13 +388,14 @@ function card(t) {
         `<span class="fact ${k}">${esc(v)}</span>`).join('')}</div>` : ''}
       ${(t.tags || []).length ? `<div class="tags">${t.tags.slice(0, 7).map(x =>
         `<span class="tg">${esc(x)}</span>`).join('')}</div>` : ''}
-      ${live ? `<span class="go">Open topic</span>` : ''}
+      <div class="actions">
+        ${live && t.url ? `<a class="go" href="${esc(t.url)}" style="--accent:${esc(accent)}">Open topic &rarr;</a>` : ''}
+        ${companionLink}
+      </div>
     </div>`;
 
   return `<div class="entry ${live ? 'live' : t.status}">
-    ${live && t.url
-      ? `<a class="card" href="${esc(t.url)}" style="--accent:${esc(accent)}">${inner}</a>`
-      : `<div class="card" style="--accent:${esc(accent)}">${inner}</div>`}
+    <div class="card" style="--accent:${esc(accent)}">${inner}</div>
   </div>`;
 }
 
@@ -383,11 +412,18 @@ function renderResources() {
 }
 
 function stats() {
-  const live = DATA.topics.filter(t => (t.status || 'live') === 'live');
-  const mins = live.reduce((s, t) =>
+  const liveGroups = primaries().filter(t => (t.status || 'live') === 'live');
+  // Minutes/questions count every live page (chapter + its practice
+  // companion) — it's still material to work through, even though it's
+  // grouped under fewer topics.
+  const pages = liveGroups.flatMap(t => {
+    const c = companionOf(t.id);
+    return c && (c.status || 'live') === 'live' ? [t, c] : [t];
+  });
+  const mins = pages.reduce((s, t) =>
     s + (parseInt(String(t.meta?.duration || '').replace(/\D/g, ''), 10) || 0), 0);
-  const qs = live.reduce((s, t) => s + (parseInt(t.meta?.questions, 10) || 0), 0);
-  $('#sTopics').textContent = live.length;
+  const qs = pages.reduce((s, t) => s + (parseInt(t.meta?.questions, 10) || 0), 0);
+  $('#sTopics').textContent = liveGroups.length;
   $('#sMins').textContent = mins || '—';
   $('#sQs').textContent = qs || '—';
 }

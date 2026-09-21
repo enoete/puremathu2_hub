@@ -190,6 +190,11 @@ async function main() {
       tags: t.tags || scraped.topics || [],
       accent: t.accent || '',
       icon: t.icon || '',
+      // Optional grouping: a classwork/practice page can point back at its
+      // parent topic so the hub nests it as a companion link instead of
+      // listing it as its own independent topic.
+      kind: t.kind || '',
+      of: t.of || '',
       meta: scraped,
       fetchedAt: new Date().toISOString(),
     });
