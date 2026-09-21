@@ -1,0 +1,52 @@
+name: Sync course content
+
+# Runs the JSONBin -> metadata -> data/content.json pipeline.
+# The API key lives in repo Secrets and never reaches the browser.
+
+on:
+  workflow_dispatch:        # the "Run workflow" button
+  push:
+    branches: [main]
+  schedule:
+    - cron: '17 */6 * * *'  # every 6 hours
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-content
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Read bin and scrape topic metadata
+        env:
+          JSONBIN_KEY: ${{ secrets.JSONBIN_KEY }}
+          JSONBIN_BIN_ID: ${{ secrets.JSONBIN_BIN_ID }}
+          JSONBIN_KEY_TYPE: ${{ vars.JSONBIN_KEY_TYPE || 'master' }}
+        run: node scripts/sync.mjs
+
+      - name: Commit if content changed
+        run: |
+          git config user.name  "course-hub-bot"
+          git config user.email "course-hub-bot@users.noreply.github.com"
+          git add data/content.json
+          if git diff --cached --quiet; then
+            echo "No content change."
+          else
+            git commit -m "chore: refresh course content [skip ci]"
+            for i in 1 2 3; do
+              if git push; then exit 0; fi
+              echo "Push rejected, rebasing and retrying ($i/3)..."
+              git pull --rebase --autostash origin main
+            done
+            echo "Could not push after 3 attempts."; exit 1
+          fi

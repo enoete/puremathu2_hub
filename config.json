@@ -1,0 +1,15 @@
+{
+  "code": "Pure Math Unit 2",
+  "title": "Pure Mathematics",
+  "subtitle": "Unit 2",
+  "institution": "Clarence Fitzroy Bryant College",
+  "tagline": "Differentiation, integration and everything they unlock — every rule with the mistake that costs the mark, and enough practice to make the decision automatic.",
+  "lecturer": "Enoete Inanga",
+  "accent": "#2557D6",
+  "accentAlt": "#6B30D9",
+  "boardTint": "#07845C",
+  "labels": {
+    "topicsHeading": "Topics",
+    "emptyState": "No topics published yet. They appear here as soon as they are added."
+  }
+}

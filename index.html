@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pure Mathematics Unit 2 — CFBC</title>
+<meta name="description" content="Course hub for Pure Mathematics Unit 2 at Clarence Fitzroy Bryant College.">
+<meta name="theme-color" content="#2557D6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EDF1F0; --card:#FFFFFF; --grid:#D8E0DF;
+  --ink:#12262C; --ink2:#41565D; --ink3:#6B7F85;
+  --wire:#1668D8; --wire-soft:#DEEAFB;
+  --live:#D97706; --live-soft:#FDF0DC;
+  --ok:#0F7A5A; --ok-soft:#DDF0E9;
+  --bad:#BC3A2C;
+  --r:4px;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --ui:"Space Grotesk",system-ui,-apple-system,sans-serif;
+  --serif:"Source Serif 4",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--serif); font-size:17px; line-height:1.6;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:28px 28px;
+}
+h1,h2,h3,.ui{font-family:var(--ui)}
+a{color:inherit; text-decoration:none}
+.wrap{max-width:1040px; margin:0 auto; padding:0 20px}
+:focus-visible{outline:3px solid var(--live); outline-offset:2px}
+
+/* ---------- masthead ---------- */
+.mast{padding:20px 0 0}
+.mast-row{display:flex; align-items:center; gap:12px; flex-wrap:wrap}
+.prompt{
+  font-family:var(--mono); font-size:.82rem; font-weight:700;
+  background:var(--ink); color:#DDE8EA; padding:6px 12px; border-radius:var(--r);
+}
+.prompt .p{color:var(--live)}
+.mast-inst{color:var(--ink2); font-size:.88rem; font-family:var(--ui)}
+
+/* ---------- hero ---------- */
+.hero{padding:40px 0 44px; border-bottom:2px solid var(--ink)}
+.hero-top{display:flex; gap:36px; flex-wrap:wrap; align-items:flex-start}
+.hero-text{flex:1 1 340px; min-width:280px}
+.hero h1{
+  font-size:clamp(2.1rem,6vw,3.6rem); font-weight:700; line-height:1.02;
+  letter-spacing:-.03em; margin:0;
+}
+.hero h1 .u{display:block; color:var(--wire)}
+.hero p.tag{max-width:48ch; color:var(--ink2); margin:16px 0 0; font-size:1.04rem; font-family:var(--serif)}
+.stats{display:flex; gap:26px; flex-wrap:wrap; margin-top:22px}
+.stat b{font-family:var(--mono); font-size:1.5rem; display:block; line-height:1; color:var(--ink)}
+.stat span{font-size:.78rem; color:var(--ink2); font-family:var(--ui)}
+
+/* hero stack animation */
+.stackviz{flex:0 0 auto; width:150px}
+.sv-frame{border:2px solid var(--ink); border-radius:var(--r); background:var(--card); padding:14px; text-align:center}
+.sv-label{font-family:var(--mono); font-size:.68rem; color:var(--ink3); margin-bottom:10px}
+.sv-col{display:flex; flex-direction:column-reverse; gap:0; border:2px solid var(--ink); border-top:none}
+.sv-cell{
+  height:30px; border-top:2px solid var(--ink); display:flex; align-items:center; justify-content:center;
+  font-family:var(--mono); font-weight:700; font-size:12px; background:var(--wire-soft); color:var(--ink3);
+}
+@media (prefers-reduced-motion:no-preference){
+  .sv-cell.go{animation:pushpop 3.2s ease-in-out infinite}
+  .sv-cell.go:nth-child(2){animation-delay:.15s}
+  .sv-cell.go:nth-child(3){animation-delay:.3s}
+}
+@keyframes pushpop{0%,60%,100%{opacity:.35; color:var(--ink3)} 20%,45%{opacity:1; color:var(--ink); background:var(--live-soft)}}
+
+/* ---------- announcement ---------- */
+.announce{display:none; gap:10px; align-items:flex-start; background:var(--live-soft); border:2px solid var(--live); padding:12px 16px; border-radius:var(--r); margin:22px 0 0; font-size:.94rem; font-family:var(--ui)}
+.announce.on{display:flex}
+
+/* ---------- controls ---------- */
+.bar{display:flex; gap:9px; align-items:center; flex-wrap:wrap; margin:34px 0 20px}
+.search{
+  flex:1 1 220px; min-width:170px; border:2px solid var(--ink); background:var(--card);
+  border-radius:var(--r); padding:9px 13px; font:inherit; font-size:.92rem; color:var(--ink); font-family:var(--ui);
+}
+.search::placeholder{color:var(--ink3)}
+.filters{display:flex; gap:6px; flex-wrap:wrap}
+.filt{
+  border:2px solid var(--ink); background:var(--card); color:var(--ink2); font-family:var(--ui);
+  border-radius:999px; padding:6px 13px; font-size:.82rem; cursor:pointer; font-weight:500;
+}
+.filt[aria-pressed="true"]{background:var(--ink); color:#fff}
+
+/* ---------- section head ---------- */
+.sect-head{display:flex; align-items:baseline; gap:12px; margin:0 0 18px; border-bottom:2px solid var(--ink); padding-bottom:8px}
+.sect-head h2{font-size:1.35rem; font-weight:700; letter-spacing:-.02em}
+.sect-head .count{font-family:var(--mono); font-size:.76rem; color:var(--ink3)}
+
+/* ---------- topic listing (a printed program: one card per "chapter") ---------- */
+.listing{counter-reset:topic}
+.entry{position:relative; margin:0 0 16px}
+.card{
+  display:grid; grid-template-columns:64px 1fr; gap:0; align-items:stretch;
+  background:var(--card); border:2px solid var(--ink); border-radius:var(--r);
+  text-decoration:none; overflow:hidden;
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+a.card:hover{transform:translateY(-2px); box-shadow:5px 6px 0 var(--accent,var(--ink))}
+.card .num{
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  background:var(--accent,var(--ink)); color:#fff;
+  font-family:var(--mono); font-weight:700; font-size:1.3rem;
+}
+.card .num small{display:block; font-size:.55rem; font-weight:500; letter-spacing:.08em; opacity:.85; font-family:var(--ui)}
+.card .body{padding:18px 20px}
+.card h3{font-size:1.18rem; margin:0 0 6px; font-weight:700; letter-spacing:-.01em}
+.card p{margin:0; color:var(--ink2); font-size:.95rem; font-family:var(--serif)}
+.facts{display:flex; gap:6px; flex-wrap:wrap; margin-top:12px}
+.fact{font-size:.73rem; color:var(--ink2); background:var(--paper); border:1px solid var(--grid); border-radius:3px; padding:3px 8px; font-family:var(--ui)}
+.fact.k{font-family:var(--mono); color:var(--ink)}
+.tags{display:flex; gap:5px; flex-wrap:wrap; margin-top:9px}
+.tg{font-size:.71rem; color:var(--wire); background:var(--wire-soft); border-radius:3px; padding:2px 7px; font-family:var(--mono)}
+.go{margin-top:12px; display:inline-block; font-weight:600; font-size:.87rem; font-family:var(--ui); color:var(--accent,var(--wire)); border-bottom:2px solid currentColor; padding-bottom:1px}
+.entry.soon .card, .entry.locked .card{opacity:.6}
+.ribbon{display:inline-block; font-size:.7rem; font-weight:600; background:var(--paper); border:1px solid var(--grid); color:var(--ink2); padding:2px 8px; border-radius:3px; margin-left:7px; vertical-align:middle; font-family:var(--ui)}
+
+/* ---------- sticky resources bar ---------- */
+.resbar{position:sticky; top:0; z-index:60; background:var(--ink); border-bottom:2px solid var(--ink)}
+.resbar-in{display:flex; align-items:center; gap:11px; padding:9px 20px}
+.resbar-label{flex:0 0 auto; font-family:var(--mono); font-weight:700; font-size:.74rem; color:#8FD9BB; white-space:nowrap}
+.resbar-scroll{display:flex; flex-wrap:wrap; gap:8px 8px; padding:2px 2px 3px; flex:1 1 auto; min-width:0}
+.rchip{
+  flex:0 0 auto; display:flex; align-items:baseline; gap:6px; text-decoration:none;
+  background:#1B3138; border:1px solid #2A454D; border-radius:999px; padding:6px 12px;
+  font-size:.82rem; font-weight:500; color:#DDE8EA; white-space:nowrap; font-family:var(--ui);
+  border-left:3px solid var(--accent,var(--wire));
+}
+.rchip:hover{background:#22404A}
+.rchip .k{font-size:.66rem; color:#8FA9AF; font-family:var(--mono)}
+
+/* ---------- states ---------- */
+.msg{background:var(--card); border:2px dashed var(--ink3); border-radius:var(--r); padding:32px; text-align:center; color:var(--ink2); font-family:var(--ui)}
+.msg b{display:block; color:var(--ink); font-size:1.05rem; margin-bottom:6px}
+.skel{height:88px; background:var(--card); border:2px solid var(--grid); border-radius:var(--r); margin-bottom:16px; opacity:.6}
+
+/* ---------- footer ---------- */
+footer{margin-top:56px; border-top:2px solid var(--ink); padding:20px 0 44px; color:var(--ink3); font-size:.83rem; font-family:var(--ui)}
+.hide{display:none!important}
+footer .fl{display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap}
+code.stamp{font-family:var(--mono); font-size:.74rem}
+
+@media (max-width:640px){
+  .hero-top{flex-direction:column}
+  .stackviz{width:120px}
+  .card{grid-template-columns:1fr}
+  .card .num{flex-direction:row; gap:6px; padding:8px}
+  .resbar-label{display:none}
+  .rchip{padding:5px 10px; font-size:.78rem}
+}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap mast-row">
+    <span class="prompt"><span class="p">$</span> cd <span id="code">compsci-unit2</span></span>
+    <span class="mast-inst" id="inst">Clarence Fitzroy Bryant College</span>
+  </div>
+</header>
+
+<nav class="resbar hide" id="resBar" aria-label="Class resources">
+  <div class="wrap resbar-in">
+    <span class="resbar-label">// resources</span>
+    <div class="resbar-scroll" id="resBarLinks"></div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap hero-top">
+    <div class="hero-text">
+      <h1 id="h1">Data<span class="u" id="h1u">Structures</span></h1>
+      <p class="tag" id="tagline"></p>
+      <div class="stats">
+        <div class="stat"><b id="sTopics">—</b><span>topics published</span></div>
+        <div class="stat"><b id="sMins">—</b><span>minutes of material</span></div>
+        <div class="stat"><b id="sQs">—</b><span>practice questions</span></div>
+      </div>
+    </div>
+    <div class="stackviz">
+      <div class="sv-frame">
+        <div class="sv-label">top &rarr;</div>
+        <div class="sv-col">
+          <div class="sv-cell go">21</div>
+          <div class="sv-cell go">34</div>
+          <div class="sv-cell go">55</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap"><div class="announce" id="announce"><span aria-hidden="true">📌</span><span id="announceText"></span></div></div>
+</section>
+
+<main class="wrap">
+  <div class="sect-head" style="margin-top:34px">
+    <h2 id="topicsHeading">Topics</h2>
+    <span class="count" id="countLabel"></span>
+  </div>
+
+  <div class="bar">
+    <input class="search" id="q" type="search" placeholder="Search topics, e.g. linked list" aria-label="Search topics">
+    <div class="filters" id="filters"></div>
+  </div>
+
+  <div id="board" class="listing">
+    <div class="skel"></div><div class="skel"></div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap fl">
+    <span id="footLeft">Computer Science Unit 2</span>
+    <span><code class="stamp" id="stamp"></code></span>
+  </div>
+</footer>
+
+<script>
+/* ------------------------------------------------------------------ */
+/* No API keys here, and none are needed. data/content.json is built    */
+/* by the GitHub Action in scripts/sync.mjs using a secret.             */
+/* ------------------------------------------------------------------ */
+
+const $ = (s, r = document) => r.querySelector(s);
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c =>
+  ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+let DATA = { topics: [] }, CFG = {}, activeTag = null;
+
+async function boot() {
+  try { CFG = await (await fetch('config.json', { cache: 'no-cache' })).json(); } catch { CFG = {}; }
+  applyConfig();
+  try {
+    const res = await fetch('data/content.json', { cache: 'no-cache' });
+    if (!res.ok) throw new Error(res.status);
+    DATA = await res.json();
+  } catch (e) {
+    $('#board').innerHTML = `<div class="msg"><b>Content hasn't been generated yet</b>
+      Run the <em>Sync course content</em> workflow in the repository's Actions tab, then refresh this page.</div>`;
+    return;
+  }
+  Object.assign(CFG, DATA.course || {});
+  applyConfig();
+  buildFilters();
+  render();
+  renderResources();
+  stats();
+  $('#stamp').textContent = DATA.generatedAt
+    ? 'content synced ' + new Date(DATA.generatedAt).toLocaleString(undefined,
+        { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })
+    : '';
+}
+
+function applyConfig() {
+  if (CFG.accent) document.documentElement.style.setProperty('--wire', CFG.accent);
+  if (CFG.code) $('#code').textContent = CFG.code;
+  if (CFG.institution) $('#inst').textContent = CFG.institution;
+  if (CFG.title) $('#h1').firstChild.textContent = CFG.title;
+  if (CFG.subtitle) $('#h1u').textContent = CFG.subtitle;
+  if (CFG.tagline) $('#tagline').textContent = CFG.tagline;
+  if (CFG.labels?.topicsHeading) $('#topicsHeading').textContent = CFG.labels.topicsHeading;
+  const t = [CFG.title, CFG.subtitle].filter(Boolean).join(' ');
+  if (t) { document.title = t + ' — ' + (CFG.institution || ''); $('#footLeft').textContent = t; }
+  const ann = (CFG.announcement || '').trim();
+  if (ann) { $('#announce').classList.add('on'); $('#announceText').textContent = ann; }
+}
+
+function allTags() {
+  const set = new Set();
+  DATA.topics.forEach(t => (t.tags || []).forEach(x => set.add(x)));
+  return [...set].sort();
+}
+
+function buildFilters() {
+  const tags = allTags().slice(0, 9);
+  $('#filters').innerHTML = tags.map(t =>
+    `<button class="filt" data-tag="${esc(t)}" aria-pressed="false">${esc(t)}</button>`).join('');
+  $('#filters').addEventListener('click', e => {
+    const b = e.target.closest('.filt'); if (!b) return;
+    activeTag = activeTag === b.dataset.tag ? null : b.dataset.tag;
+    [...$('#filters').children].forEach(x =>
+      x.setAttribute('aria-pressed', String(x.dataset.tag === activeTag)));
+    render();
+  });
+}
+
+function matches(t, q) {
+  if (activeTag && !(t.tags || []).includes(activeTag)) return false;
+  if (!q) return true;
+  const hay = [t.title, t.blurb, (t.tags || []).join(' '), t.meta?.topics?.join(' ')]
+    .join(' ').toLowerCase();
+  return hay.includes(q);
+}
+
+function render() {
+  const q = $('#q').value.trim().toLowerCase();
+  const list = DATA.topics
+    .filter(t => matches(t, q))
+    .sort((a, b) => (a.number || 0) - (b.number || 0));
+
+  $('#countLabel').textContent = `${list.length} of ${DATA.topics.length}`;
+
+  if (!DATA.topics.length) {
+    $('#board').innerHTML = `<div class="msg"><b>No topics yet</b>${esc(
+      CFG.labels?.emptyState || 'Topics appear here as soon as they are added to the course bin.')}</div>`;
+    return;
+  }
+  if (!list.length) {
+    $('#board').innerHTML = `<div class="msg"><b>Nothing matches that</b>Try a different word, or clear the filter.</div>`;
+    return;
+  }
+  $('#board').innerHTML = list.map(card).join('');
+}
+
+function card(t) {
+  const m = t.meta || {};
+  const accent = t.accent || 'var(--wire)';
+  const live = (t.status || 'live') === 'live';
+  const facts = [];
+  if (m.duration) facts.push(['k', m.duration]);
+  if (m.difficulty) facts.push(['', m.difficulty]);
+  if (m.sections) facts.push(['k', m.sections + ' sections']);
+  if (m.questions) facts.push(['k', m.questions + ' questions']);
+  if (m.objectives) facts.push(['', m.objectives + ' objectives']);
+
+  const inner = `
+    <div class="num" style="--accent:${esc(accent)}">${String(t.number).padStart(2, '0')}<small>TOPIC</small></div>
+    <div class="body">
+      <h3>${esc(t.title)}${live ? '' : `<span class="ribbon">${t.status === 'soon' ? 'Coming soon' : 'Locked'}</span>`}</h3>
+      <p>${esc(t.blurb || 'Open the topic to see what it covers.')}</p>
+      ${facts.length ? `<div class="facts">${facts.map(([k, v]) =>
+        `<span class="fact ${k}">${esc(v)}</span>`).join('')}</div>` : ''}
+      ${(t.tags || []).length ? `<div class="tags">${t.tags.slice(0, 7).map(x =>
+        `<span class="tg">${esc(x)}</span>`).join('')}</div>` : ''}
+      ${live ? `<span class="go">Open topic</span>` : ''}
+    </div>`;
+
+  return `<div class="entry ${live ? 'live' : t.status}">
+    ${live && t.url
+      ? `<a class="card" href="${esc(t.url)}" style="--accent:${esc(accent)}">${inner}</a>`
+      : `<div class="card" style="--accent:${esc(accent)}">${inner}</div>`}
+  </div>`;
+}
+
+function renderResources() {
+  const list = DATA.resources || [];
+  if (!list.length) return;
+  $('#resBar').classList.remove('hide');
+  $('#resBarLinks').innerHTML = list.map(r => `
+    <a class="rchip" href="${esc(r.url)}" target="_blank" rel="noopener"
+       style="--accent:${esc(r.accent || 'var(--wire)')}"
+       title="${esc(r.blurb || r.title)}">
+      ${esc(r.title)}${r.kind ? ` <span class="k">${esc(r.kind)}</span>` : ''}
+    </a>`).join('');
+}
+
+function stats() {
+  const live = DATA.topics.filter(t => (t.status || 'live') === 'live');
+  const mins = live.reduce((s, t) =>
+    s + (parseInt(String(t.meta?.duration || '').replace(/\D/g, ''), 10) || 0), 0);
+  const qs = live.reduce((s, t) => s + (parseInt(t.meta?.questions, 10) || 0), 0);
+  $('#sTopics').textContent = live.length;
+  $('#sMins').textContent = mins || '—';
+  $('#sQs').textContent = qs || '—';
+}
+
+$('#q').addEventListener('input', render);
+boot();
+</script>
+</body>
+</html>
