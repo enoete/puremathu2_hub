@@ -36,10 +36,10 @@
       "host": "enoete.github.io"
     }
   ],
-  "generatedAt": "2026-09-21T13:37:57.761Z",
+  "generatedAt": "2026-09-21T13:41:49.903Z",
   "sourceBin": "6ab08678ffd5d160531dc2fb",
   "topicCount": 8,
-  "failures": 2,
+  "failures": 0,
   "topics": [
     {
       "id": "differentiation",
@@ -99,7 +99,7 @@
         "sections": 8,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T13:37:56.607Z"
+      "fetchedAt": "2026-09-21T13:41:48.627Z"
     },
     {
       "id": "differentiation-classwork",
@@ -148,7 +148,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T13:37:56.714Z"
+      "fetchedAt": "2026-09-21T13:41:48.734Z"
     },
     {
       "id": "partial-fractions",
@@ -209,7 +209,7 @@
         "sections": 9,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T13:37:56.878Z"
+      "fetchedAt": "2026-09-21T13:41:48.898Z"
     },
     {
       "id": "partial-fractions-classwork",
@@ -256,7 +256,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T13:37:57.026Z"
+      "fetchedAt": "2026-09-21T13:41:49.025Z"
     },
     {
       "id": "integration",
@@ -324,7 +324,7 @@
         "sections": 11,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T13:37:57.224Z"
+      "fetchedAt": "2026-09-21T13:41:49.212Z"
     },
     {
       "id": "integration-classwork",
@@ -369,37 +369,108 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T13:37:57.341Z"
+      "fetchedAt": "2026-09-21T13:41:49.327Z"
     },
     {
       "id": "reduction-formulae",
       "url": "https://enoete.github.io/puremathu2_7/",
-      "title": "reduction-formulae",
-      "blurb": "",
+      "title": "Reduction Formulae",
+      "blurb": "What a reduction formula is, how to derive one, and how to recognise which family and base case an integral lands on \\u2014 ten reference cards, two drills, a guided derivation, and a 20-question self-test.",
       "number": 4,
       "status": "live",
-      "tags": [],
+      "tags": [
+        "Reduction formula notation",
+        "Deriving by splitting off a factor",
+        "Base cases",
+        "Making I sub n the subject",
+        "Repeated reduction",
+        "Choosing where you land",
+        "The four standard trig families",
+        "Definite integrals and boundary terms",
+        "Non-trigonometric families"
+      ],
       "accent": "#C62828",
       "icon": "",
       "kind": "",
       "of": "",
-      "meta": {},
-      "fetchedAt": "2026-09-21T13:37:57.399Z"
+      "meta": {
+        "title": "Reduction Formulae",
+        "description": "What a reduction formula is, how to derive one, and how to recognise which family and base case an integral lands on \\u2014 ten reference cards, two drills, a guided derivation, and a 20-question self-test.",
+        "image": "",
+        "siteName": "Pure Math Unit 2 \\u00b7 CFBC",
+        "themeColor": "#C62828",
+        "duration": "145 min",
+        "difficulty": "Core",
+        "objectives": "14",
+        "questions": "20",
+        "topics": [
+          "Reduction formula notation",
+          "Deriving by splitting off a factor",
+          "Base cases",
+          "Making I sub n the subject",
+          "Repeated reduction",
+          "Choosing where you land",
+          "The four standard trig families",
+          "Definite integrals and boundary terms",
+          "Non-trigonometric families"
+        ],
+        "activities": [
+          "Two-journeys picker",
+          "Where-do-you-land drill",
+          "Choose-the-split drill",
+          "Guided derivation",
+          "Study checklist",
+          "Self-test"
+        ],
+        "sections": 9,
+        "updated": "2026-09-21"
+      },
+      "fetchedAt": "2026-09-21T13:41:49.478Z"
     },
     {
       "id": "reduction-formulae-classwork",
       "url": "https://enoete.github.io/puremathu2_8/",
-      "title": "reduction-formulae-classwork",
-      "blurb": "",
+      "title": "Reduction Formulae Classwork",
+      "blurb": "Six questions spanning every case of reduction formulae, adapted from previous test papers \\u2014 hints, full working and answers on every question.",
       "number": 4,
       "status": "live",
-      "tags": [],
+      "tags": [
+        "Reading a reduction formula",
+        "Deriving a reduction formula",
+        "Applying a reduction formula",
+        "Base cases",
+        "Definite integrals"
+      ],
       "accent": "#9A5B00",
       "icon": "",
       "kind": "classwork",
       "of": "reduction-formulae",
-      "meta": {},
-      "fetchedAt": "2026-09-21T13:37:57.480Z"
+      "meta": {
+        "title": "Reduction Formulae Classwork",
+        "description": "Six questions spanning every case of reduction formulae, adapted from previous test papers \\u2014 hints, full working and answers on every question.",
+        "image": "",
+        "siteName": "Pure Math Unit 2 \\u00b7 CFBC",
+        "themeColor": "#9A5B00",
+        "duration": "65 min",
+        "difficulty": "Core",
+        "objectives": "6",
+        "questions": "6",
+        "topics": [
+          "Reading a reduction formula",
+          "Deriving a reduction formula",
+          "Applying a reduction formula",
+          "Base cases",
+          "Definite integrals"
+        ],
+        "activities": [
+          "Read it before you work",
+          "Derive then use",
+          "Other families"
+        ],
+        "sections": 3,
+        "updated": "2026-09-21"
+      },
+      "fetchedAt": "2026-09-21T13:41:49.591Z"
     }
   ]
 }
