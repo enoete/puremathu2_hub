@@ -36,10 +36,10 @@
       "host": "enoete.github.io"
     }
   ],
-  "generatedAt": "2026-09-21T14:04:31.580Z",
+  "generatedAt": "2026-09-21T14:08:11.597Z",
   "sourceBin": "6ab08678ffd5d160531dc2fb",
   "topicCount": 10,
-  "failures": 2,
+  "failures": 0,
   "topics": [
     {
       "id": "differentiation",
@@ -99,7 +99,7 @@
         "sections": 8,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T14:04:30.120Z"
+      "fetchedAt": "2026-09-21T14:08:10.062Z"
     },
     {
       "id": "differentiation-classwork",
@@ -148,7 +148,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T14:04:30.227Z"
+      "fetchedAt": "2026-09-21T14:08:10.228Z"
     },
     {
       "id": "partial-fractions",
@@ -209,7 +209,7 @@
         "sections": 9,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T14:04:30.529Z"
+      "fetchedAt": "2026-09-21T14:08:10.371Z"
     },
     {
       "id": "partial-fractions-classwork",
@@ -256,7 +256,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T14:04:30.608Z"
+      "fetchedAt": "2026-09-21T14:08:10.478Z"
     },
     {
       "id": "integration",
@@ -324,7 +324,7 @@
         "sections": 11,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T14:04:30.799Z"
+      "fetchedAt": "2026-09-21T14:08:10.654Z"
     },
     {
       "id": "integration-classwork",
@@ -369,7 +369,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T14:04:30.858Z"
+      "fetchedAt": "2026-09-21T14:08:10.742Z"
     },
     {
       "id": "reduction-formulae",
@@ -425,7 +425,7 @@
         "sections": 9,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T14:04:31.008Z"
+      "fetchedAt": "2026-09-21T14:08:10.847Z"
     },
     {
       "id": "reduction-formulae-classwork",
@@ -470,37 +470,108 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T14:04:31.102Z"
+      "fetchedAt": "2026-09-21T14:08:10.990Z"
     },
     {
       "id": "trapezium-rule",
       "url": "https://enoete.github.io/puremathu2_9/",
-      "title": "trapezium-rule",
-      "blurb": "",
+      "title": "Trapezium Rule",
+      "blurb": "Why the trapezium rule exists, the four-step method for using it, and how to tell whether your estimate is too high or too low — a live strip-width lab, three drills, and a 24-question self-test.",
       "number": 5,
       "status": "live",
-      "tags": [],
+      "tags": [
+        "When you are allowed to use it",
+        "Why a trapezium",
+        "Finding the strip width",
+        "Building the table of ordinates",
+        "Ends once middles twice",
+        "Presenting the answer",
+        "Over-estimate vs under-estimate",
+        "How the error behaves",
+        "What questions actually ask"
+      ],
       "accent": "#2557D6",
       "icon": "",
       "kind": "",
       "of": "",
-      "meta": {},
-      "fetchedAt": "2026-09-21T14:04:31.163Z"
+      "meta": {
+        "title": "Trapezium Rule",
+        "description": "Why the trapezium rule exists, the four-step method for using it, and how to tell whether your estimate is too high or too low — a live strip-width lab, three drills, and a 24-question self-test.",
+        "image": "",
+        "siteName": "Pure Math Unit 2 · CFBC",
+        "themeColor": "#2557D6",
+        "duration": "150 min",
+        "difficulty": "Core",
+        "objectives": "17",
+        "questions": "24",
+        "topics": [
+          "When you are allowed to use it",
+          "Why a trapezium",
+          "Finding the strip width",
+          "Building the table of ordinates",
+          "Ends once middles twice",
+          "Presenting the answer",
+          "Over-estimate vs under-estimate",
+          "How the error behaves",
+          "What questions actually ask"
+        ],
+        "activities": [
+          "Strip lab",
+          "Set-up drill",
+          "Over-or-under drill",
+          "Guided dissections",
+          "Study checklist",
+          "Self-test"
+        ],
+        "sections": 11,
+        "updated": "2026-09-21"
+      },
+      "fetchedAt": "2026-09-21T14:08:11.157Z"
     },
     {
       "id": "trapezium-rule-classwork",
       "url": "https://enoete.github.io/puremathu2_10/",
-      "title": "trapezium-rule-classwork",
-      "blurb": "",
+      "title": "Trapezium Rule Classwork",
+      "blurb": "Nine questions spanning the whole chapter — reading the formula correctly, running it by hand, and checking an estimate against an exact answer, with hints, full working and answers on every question.",
       "number": 5,
       "status": "live",
-      "tags": [],
+      "tags": [
+        "Reading the formula",
+        "Setting up the table of ordinates",
+        "Applying the rule by hand",
+        "Over-estimate vs under-estimate",
+        "Checking against an exact answer"
+      ],
       "accent": "#6B30D9",
       "icon": "",
       "kind": "classwork",
       "of": "trapezium-rule",
-      "meta": {},
-      "fetchedAt": "2026-09-21T14:04:31.238Z"
+      "meta": {
+        "title": "Trapezium Rule Classwork",
+        "description": "Nine questions spanning the whole chapter — reading the formula correctly, running it by hand, and checking an estimate against an exact answer, with hints, full working and answers on every question.",
+        "image": "",
+        "siteName": "Pure Math Unit 2 · CFBC",
+        "themeColor": "#6B30D9",
+        "duration": "90 min",
+        "difficulty": "Core",
+        "objectives": "9",
+        "questions": "9",
+        "topics": [
+          "Reading the formula",
+          "Setting up the table of ordinates",
+          "Applying the rule by hand",
+          "Over-estimate vs under-estimate",
+          "Checking against an exact answer"
+        ],
+        "activities": [
+          "Worked questions",
+          "Step-by-step checks",
+          "Full answers"
+        ],
+        "sections": 3,
+        "updated": "2026-09-21"
+      },
+      "fetchedAt": "2026-09-21T14:08:11.278Z"
     }
   ]
 }
