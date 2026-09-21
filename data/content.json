@@ -36,7 +36,7 @@
       "host": "enoete.github.io"
     }
   ],
-  "generatedAt": "2026-09-21T22:25:17.328Z",
+  "generatedAt": "2026-09-21T22:26:45.079Z",
   "sourceBin": "6ab08678ffd5d160531dc2fb",
   "topicCount": 12,
   "failures": 0,
@@ -99,7 +99,7 @@
         "sections": 8,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T22:25:13.855Z"
+      "fetchedAt": "2026-09-21T22:26:43.635Z"
     },
     {
       "id": "differentiation-classwork",
@@ -148,7 +148,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T22:25:13.941Z"
+      "fetchedAt": "2026-09-21T22:26:43.716Z"
     },
     {
       "id": "partial-fractions",
@@ -209,7 +209,7 @@
         "sections": 9,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T22:25:14.051Z"
+      "fetchedAt": "2026-09-21T22:26:43.844Z"
     },
     {
       "id": "partial-fractions-classwork",
@@ -256,7 +256,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T22:25:14.119Z"
+      "fetchedAt": "2026-09-21T22:26:43.907Z"
     },
     {
       "id": "integration",
@@ -324,7 +324,7 @@
         "sections": 11,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T22:25:14.279Z"
+      "fetchedAt": "2026-09-21T22:26:44.066Z"
     },
     {
       "id": "integration-classwork",
@@ -369,7 +369,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T22:25:14.442Z"
+      "fetchedAt": "2026-09-21T22:26:44.142Z"
     },
     {
       "id": "reduction-formulae",
@@ -425,7 +425,7 @@
         "sections": 9,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T22:25:14.576Z"
+      "fetchedAt": "2026-09-21T22:26:44.266Z"
     },
     {
       "id": "reduction-formulae-classwork",
@@ -470,7 +470,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T22:25:14.645Z"
+      "fetchedAt": "2026-09-21T22:26:44.323Z"
     },
     {
       "id": "trapezium-rule",
@@ -526,7 +526,7 @@
         "sections": 11,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T22:25:16.721Z"
+      "fetchedAt": "2026-09-21T22:26:44.478Z"
     },
     {
       "id": "trapezium-rule-classwork",
@@ -571,13 +571,13 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T22:25:16.842Z"
+      "fetchedAt": "2026-09-21T22:26:44.559Z"
     },
     {
       "id": "complex-numbers",
       "url": "https://enoete.github.io/puremathu2_11/",
       "title": "Complex Numbers",
-      "blurb": "The algebra of i, the Argand plane, the four standard loci, and the greatest-and-least questions that catch almost everyone — a draggable plane lab, three drills, and a 31-question self-test.",
+      "blurb": "The algebra of i, the Argand plane, de Moivre’s theorem, the four standard loci, and the greatest-and-least questions that catch almost everyone — a draggable plane lab, three drills, a guided dissection, and a 41-question self-test.",
       "number": 6,
       "status": "live",
       "tags": [
@@ -596,14 +596,14 @@
       "of": "",
       "meta": {
         "title": "Complex Numbers",
-        "description": "The algebra of i, the Argand plane, the four standard loci, and the greatest-and-least questions that catch almost everyone — a draggable plane lab, three drills, and a 31-question self-test.",
+        "description": "The algebra of i, the Argand plane, de Moivre’s theorem, the four standard loci, and the greatest-and-least questions that catch almost everyone — a draggable plane lab, three drills, a guided dissection, and a 41-question self-test.",
         "image": "",
         "siteName": "Pure Math Unit 2 · CFBC",
         "themeColor": "#C81E78",
-        "duration": "160 min",
+        "duration": "195 min",
         "difficulty": "Core",
         "objectives": "20",
-        "questions": "31",
+        "questions": "41",
         "topics": [
           "Powers of i",
           "Complex arithmetic",
@@ -623,10 +623,10 @@
           "Study checklist",
           "Self-test"
         ],
-        "sections": 12,
+        "sections": 14,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T22:25:17.010Z"
+      "fetchedAt": "2026-09-21T22:26:44.757Z"
     },
     {
       "id": "complex-numbers-classwork",
@@ -673,7 +673,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T22:25:17.124Z"
+      "fetchedAt": "2026-09-21T22:26:44.864Z"
     }
   ]
 }
