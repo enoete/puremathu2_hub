@@ -7,8 +7,36 @@
     "term": "Semester 1",
     "announcement": ""
   },
-  "resources": [],
-  "generatedAt": "2026-09-21T01:37:15.661Z",
+  "resources": [
+    {
+      "id": "paper1practice",
+      "url": "https://enoete.github.io/puremath2paper1/",
+      "title": "Paper 1 Past Paper Practice (2008–2023)",
+      "blurb": "Real Paper 1 questions pulled from CAPE past papers spanning 2008 to 2023, for quick targeted practice.",
+      "kind": "Past papers",
+      "accent": "#0F7A5A",
+      "host": "enoete.github.io"
+    },
+    {
+      "id": "revisionhub",
+      "url": "https://enoete.github.io/puremath2capepastpapers/",
+      "title": "CAPE Unit 2 Revision Hub",
+      "blurb": "Past-paper-style practice across the whole syllabus — Calculus II and complex numbers, sequences and series, differential equations and more.",
+      "kind": "Past papers",
+      "accent": "#9A5B00",
+      "host": "enoete.github.io"
+    },
+    {
+      "id": "mockexam",
+      "url": "https://enoete.github.io/capemockexam/",
+      "title": "Full Mock Exam",
+      "blurb": "A complete timed mock paper — implicit and partial differentiation, complex numbers, integration by parts, partial fractions, the lot.",
+      "kind": "Mock exam",
+      "accent": "#BC3A2C",
+      "host": "enoete.github.io"
+    }
+  ],
+  "generatedAt": "2026-09-21T01:47:38.273Z",
   "sourceBin": "6ab08678ffd5d160531dc2fb",
   "topicCount": 2,
   "failures": 0,
@@ -69,7 +97,7 @@
         "sections": 8,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T01:37:15.570Z"
+      "fetchedAt": "2026-09-21T01:47:38.156Z"
     },
     {
       "id": "differentiation-classwork",
@@ -116,7 +144,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T01:37:15.661Z"
+      "fetchedAt": "2026-09-21T01:47:38.191Z"
     }
   ]
 }
