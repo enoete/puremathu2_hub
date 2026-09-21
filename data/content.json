@@ -36,9 +36,9 @@
       "host": "enoete.github.io"
     }
   ],
-  "generatedAt": "2026-09-21T02:52:26.672Z",
+  "generatedAt": "2026-09-21T03:26:03.891Z",
   "sourceBin": "6ab08678ffd5d160531dc2fb",
-  "topicCount": 4,
+  "topicCount": 6,
   "failures": 0,
   "topics": [
     {
@@ -99,7 +99,7 @@
         "sections": 8,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T02:52:24.991Z"
+      "fetchedAt": "2026-09-21T03:26:03.001Z"
     },
     {
       "id": "differentiation-classwork",
@@ -148,7 +148,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T02:52:25.265Z"
+      "fetchedAt": "2026-09-21T03:26:03.098Z"
     },
     {
       "id": "partial-fractions",
@@ -209,7 +209,7 @@
         "sections": 9,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T02:52:25.704Z"
+      "fetchedAt": "2026-09-21T03:26:03.249Z"
     },
     {
       "id": "partial-fractions-classwork",
@@ -256,7 +256,119 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T02:52:25.946Z"
+      "fetchedAt": "2026-09-21T03:26:03.360Z"
+    },
+    {
+      "id": "integration",
+      "url": "https://enoete.github.io/puremathu2_5/",
+      "title": "Integration",
+      "blurb": "Every integration method in one place: recognising the shape, forcing an integral into that shape, six guided dissections, and a 31-question self-test.",
+      "number": 3,
+      "status": "live",
+      "tags": [
+        "Standard forms",
+        "The three golden patterns",
+        "Choosing the substitution",
+        "Doing a substitution properly",
+        "Definite integrals",
+        "Integration by parts",
+        "Repeated by parts (the loop)",
+        "Partial fractions inside an integral",
+        "Completing the square",
+        "Even powers of sine and cosine",
+        "Odd powers of sine and cosine",
+        "Powers of tangent",
+        "Products of sines and cosines",
+        "Trigonometric substitution"
+      ],
+      "accent": "#07845C",
+      "icon": "",
+      "kind": "",
+      "of": "",
+      "meta": {
+        "title": "Integration",
+        "description": "Every integration method in one place: recognising the shape, forcing an integral into that shape, six guided dissections, and a 31-question self-test.",
+        "image": "",
+        "siteName": "Pure Math Unit 2 · CFBC",
+        "themeColor": "#07845C",
+        "duration": "210 min",
+        "difficulty": "Core",
+        "objectives": "16",
+        "questions": "31",
+        "topics": [
+          "Standard forms",
+          "The three golden patterns",
+          "Choosing the substitution",
+          "Doing a substitution properly",
+          "Definite integrals",
+          "Integration by parts",
+          "Repeated by parts (the loop)",
+          "Partial fractions inside an integral",
+          "Completing the square",
+          "Even powers of sine and cosine",
+          "Odd powers of sine and cosine",
+          "Powers of tangent",
+          "Products of sines and cosines",
+          "Trigonometric substitution"
+        ],
+        "activities": [
+          "Method decision table",
+          "Name-the-method drill",
+          "Pick-the-substitution drill",
+          "Two-ways comparison",
+          "Guided dissections",
+          "Study checklist",
+          "Self-test"
+        ],
+        "sections": 10,
+        "updated": "2026-09-21"
+      },
+      "fetchedAt": "2026-09-21T03:26:03.469Z"
+    },
+    {
+      "id": "integration-classwork",
+      "url": "https://enoete.github.io/puremathu2_6/",
+      "title": "Integration Classwork",
+      "blurb": "Eight questions spanning the whole chapter, adapted from previous test papers — hints, full working and answers on every question.",
+      "number": 3,
+      "status": "live",
+      "tags": [
+        "Recognising the method",
+        "Substitution",
+        "Integration by parts",
+        "Partial fractions inside an integral",
+        "Trigonometric integrals"
+      ],
+      "accent": "#0A6F96",
+      "icon": "",
+      "kind": "classwork",
+      "of": "integration",
+      "meta": {
+        "title": "Integration Classwork",
+        "description": "Eight questions spanning the whole chapter, adapted from previous test papers — hints, full working and answers on every question.",
+        "image": "",
+        "siteName": "Pure Math Unit 2 · CFBC",
+        "themeColor": "#0A6F96",
+        "duration": "80 min",
+        "difficulty": "Core",
+        "objectives": "8",
+        "questions": "8",
+        "topics": [
+          "Recognising the method",
+          "Substitution",
+          "Integration by parts",
+          "Partial fractions inside an integral",
+          "Trigonometric integrals"
+        ],
+        "activities": [
+          "Recognise before you work",
+          "Substitution and by parts",
+          "Fractions and trigonometry"
+        ],
+        "sections": 3,
+        "updated": "2026-09-21"
+      },
+      "fetchedAt": "2026-09-21T03:26:03.561Z"
     }
   ]
 }
