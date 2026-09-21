@@ -36,9 +36,9 @@
       "host": "enoete.github.io"
     }
   ],
-  "generatedAt": "2026-09-21T02:03:27.146Z",
+  "generatedAt": "2026-09-21T02:42:42.822Z",
   "sourceBin": "6ab08678ffd5d160531dc2fb",
-  "topicCount": 2,
+  "topicCount": 4,
   "failures": 0,
   "topics": [
     {
@@ -97,7 +97,7 @@
         "sections": 8,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T02:03:26.821Z"
+      "fetchedAt": "2026-09-21T02:42:42.136Z"
     },
     {
       "id": "differentiation-classwork",
@@ -144,7 +144,111 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T02:03:26.916Z"
+      "fetchedAt": "2026-09-21T02:42:42.334Z"
+    },
+    {
+      "id": "partial-fractions",
+      "url": "https://enoete.github.io/puremathu2_3/",
+      "title": "Partial Fractions",
+      "blurb": "Every case of partial fractions in one place: naming the shape, counting the constants, the cover-up shortcut, five guided dissections, and a 24-question self-test.",
+      "number": 3,
+      "status": "live",
+      "tags": [
+        "Proper vs improper fractions",
+        "Factorising denominators",
+        "Unrepeated linear factors",
+        "Repeated linear factors",
+        "Irreducible quadratic factors",
+        "Repeated quadratic factors",
+        "Substituting zeros",
+        "Cover-up rule",
+        "Equating coefficients",
+        "Dividing improper fractions",
+        "Checking by substitution"
+      ],
+      "accent": "#C81E78",
+      "icon": "",
+      "meta": {
+        "title": "Partial Fractions",
+        "description": "Every case of partial fractions in one place: naming the shape, counting the constants, the cover-up shortcut, five guided dissections, and a 24-question self-test.",
+        "image": "",
+        "siteName": "Pure Math Unit 2 · CFBC",
+        "themeColor": "#C81E78",
+        "duration": "160 min",
+        "difficulty": "Core",
+        "objectives": "14",
+        "questions": "24",
+        "topics": [
+          "Proper vs improper fractions",
+          "Factorising denominators",
+          "Unrepeated linear factors",
+          "Repeated linear factors",
+          "Irreducible quadratic factors",
+          "Repeated quadratic factors",
+          "Substituting zeros",
+          "Cover-up rule",
+          "Equating coefficients",
+          "Dividing improper fractions",
+          "Checking by substitution"
+        ],
+        "activities": [
+          "Two-gate decision walkthrough",
+          "Name-the-shape drill",
+          "Count-the-letters drill",
+          "Cover-up trick demo",
+          "Guided dissections",
+          "Study checklist",
+          "Self-test"
+        ],
+        "sections": 9,
+        "updated": "2026-09-21"
+      },
+      "fetchedAt": "2026-09-21T02:42:42.465Z"
+    },
+    {
+      "id": "partial-fractions-classwork",
+      "url": "https://enoete.github.io/puremathu2_4/",
+      "title": "Partial Fractions Classwork",
+      "blurb": "Six questions spanning every case of partial fractions, adapted from previous test papers — hints, full working and answers on every question.",
+      "number": 4,
+      "status": "live",
+      "tags": [
+        "Unrepeated linear factors",
+        "Repeated linear factor",
+        "Irreducible quadratic factor",
+        "Improper fraction",
+        "Repeated quadratic factor",
+        "Working backwards from the identity"
+      ],
+      "accent": "#D1510A",
+      "icon": "",
+      "meta": {
+        "title": "Partial Fractions Classwork",
+        "description": "Six questions spanning every case of partial fractions, adapted from previous test papers — hints, full working and answers on every question.",
+        "image": "",
+        "siteName": "Pure Math Unit 2 · CFBC",
+        "themeColor": "#D1510A",
+        "duration": "60 min",
+        "difficulty": "Core",
+        "objectives": "6",
+        "questions": "6",
+        "topics": [
+          "Unrepeated linear factors",
+          "Repeated linear factor",
+          "Irreducible quadratic factor",
+          "Improper fraction",
+          "Repeated quadratic factor",
+          "Working backwards from the identity"
+        ],
+        "activities": [
+          "Straightforward splits",
+          "Harder shapes",
+          "Putting it to work"
+        ],
+        "sections": 3,
+        "updated": "2026-09-21"
+      },
+      "fetchedAt": "2026-09-21T02:42:42.552Z"
     }
   ]
 }
