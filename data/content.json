@@ -36,7 +36,7 @@
       "host": "enoete.github.io"
     }
   ],
-  "generatedAt": "2026-09-21T03:26:03.891Z",
+  "generatedAt": "2026-09-21T04:59:10.287Z",
   "sourceBin": "6ab08678ffd5d160531dc2fb",
   "topicCount": 6,
   "failures": 0,
@@ -99,7 +99,7 @@
         "sections": 8,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T03:26:03.001Z"
+      "fetchedAt": "2026-09-21T04:59:09.136Z"
     },
     {
       "id": "differentiation-classwork",
@@ -148,7 +148,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T03:26:03.098Z"
+      "fetchedAt": "2026-09-21T04:59:09.238Z"
     },
     {
       "id": "partial-fractions",
@@ -209,7 +209,7 @@
         "sections": 9,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T03:26:03.249Z"
+      "fetchedAt": "2026-09-21T04:59:09.707Z"
     },
     {
       "id": "partial-fractions-classwork",
@@ -256,7 +256,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T03:26:03.360Z"
+      "fetchedAt": "2026-09-21T04:59:09.820Z"
     },
     {
       "id": "integration",
@@ -323,7 +323,7 @@
         "sections": 10,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T03:26:03.469Z"
+      "fetchedAt": "2026-09-21T04:59:09.920Z"
     },
     {
       "id": "integration-classwork",
@@ -368,7 +368,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T03:26:03.561Z"
+      "fetchedAt": "2026-09-21T04:59:10.024Z"
     }
   ]
 }
