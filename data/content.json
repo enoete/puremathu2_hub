@@ -36,7 +36,7 @@
       "host": "enoete.github.io"
     }
   ],
-  "generatedAt": "2026-09-21T02:42:42.822Z",
+  "generatedAt": "2026-09-21T02:52:26.672Z",
   "sourceBin": "6ab08678ffd5d160531dc2fb",
   "topicCount": 4,
   "failures": 0,
@@ -63,6 +63,8 @@
       ],
       "accent": "#2557D6",
       "icon": "",
+      "kind": "",
+      "of": "",
       "meta": {
         "title": "Differentiation",
         "description": "Everything in Chapter 2, in the order you need it: how to recognise what you",
@@ -97,14 +99,14 @@
         "sections": 8,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T02:42:42.136Z"
+      "fetchedAt": "2026-09-21T02:52:24.991Z"
     },
     {
       "id": "differentiation-classwork",
       "url": "https://enoete.github.io/puremathu2_2/",
       "title": "Differentiation Classwork",
       "blurb": "Eight questions spanning the whole chapter, adapted from previous test papers — hints, full working and answers on every question.",
-      "number": 2,
+      "number": 1,
       "status": "live",
       "tags": [
         "Log laws",
@@ -117,6 +119,8 @@
       ],
       "accent": "#6B30D9",
       "icon": "",
+      "kind": "classwork",
+      "of": "differentiation",
       "meta": {
         "title": "Differentiation Classwork",
         "description": "Eight questions spanning the whole chapter, adapted from previous test papers — hints, full working and answers on every question.",
@@ -144,14 +148,14 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T02:42:42.334Z"
+      "fetchedAt": "2026-09-21T02:52:25.265Z"
     },
     {
       "id": "partial-fractions",
       "url": "https://enoete.github.io/puremathu2_3/",
       "title": "Partial Fractions",
       "blurb": "Every case of partial fractions in one place: naming the shape, counting the constants, the cover-up shortcut, five guided dissections, and a 24-question self-test.",
-      "number": 3,
+      "number": 2,
       "status": "live",
       "tags": [
         "Proper vs improper fractions",
@@ -168,6 +172,8 @@
       ],
       "accent": "#C81E78",
       "icon": "",
+      "kind": "",
+      "of": "",
       "meta": {
         "title": "Partial Fractions",
         "description": "Every case of partial fractions in one place: naming the shape, counting the constants, the cover-up shortcut, five guided dissections, and a 24-question self-test.",
@@ -203,14 +209,14 @@
         "sections": 9,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T02:42:42.465Z"
+      "fetchedAt": "2026-09-21T02:52:25.704Z"
     },
     {
       "id": "partial-fractions-classwork",
       "url": "https://enoete.github.io/puremathu2_4/",
       "title": "Partial Fractions Classwork",
       "blurb": "Six questions spanning every case of partial fractions, adapted from previous test papers — hints, full working and answers on every question.",
-      "number": 4,
+      "number": 2,
       "status": "live",
       "tags": [
         "Unrepeated linear factors",
@@ -222,6 +228,8 @@
       ],
       "accent": "#D1510A",
       "icon": "",
+      "kind": "classwork",
+      "of": "partial-fractions",
       "meta": {
         "title": "Partial Fractions Classwork",
         "description": "Six questions spanning every case of partial fractions, adapted from previous test papers — hints, full working and answers on every question.",
@@ -248,7 +256,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T02:42:42.552Z"
+      "fetchedAt": "2026-09-21T02:52:25.946Z"
     }
   ]
 }
