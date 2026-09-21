@@ -36,10 +36,10 @@
       "host": "enoete.github.io"
     }
   ],
-  "generatedAt": "2026-09-21T04:59:10.287Z",
+  "generatedAt": "2026-09-21T13:37:57.761Z",
   "sourceBin": "6ab08678ffd5d160531dc2fb",
-  "topicCount": 6,
-  "failures": 0,
+  "topicCount": 8,
+  "failures": 2,
   "topics": [
     {
       "id": "differentiation",
@@ -99,7 +99,7 @@
         "sections": 8,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T04:59:09.136Z"
+      "fetchedAt": "2026-09-21T13:37:56.607Z"
     },
     {
       "id": "differentiation-classwork",
@@ -148,7 +148,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T04:59:09.238Z"
+      "fetchedAt": "2026-09-21T13:37:56.714Z"
     },
     {
       "id": "partial-fractions",
@@ -209,7 +209,7 @@
         "sections": 9,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T04:59:09.707Z"
+      "fetchedAt": "2026-09-21T13:37:56.878Z"
     },
     {
       "id": "partial-fractions-classwork",
@@ -256,7 +256,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T04:59:09.820Z"
+      "fetchedAt": "2026-09-21T13:37:57.026Z"
     },
     {
       "id": "integration",
@@ -312,6 +312,7 @@
           "Trigonometric substitution"
         ],
         "activities": [
+          "Standard-form flip cards",
           "Method decision table",
           "Name-the-method drill",
           "Pick-the-substitution drill",
@@ -320,10 +321,10 @@
           "Study checklist",
           "Self-test"
         ],
-        "sections": 10,
+        "sections": 11,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T04:59:09.920Z"
+      "fetchedAt": "2026-09-21T13:37:57.224Z"
     },
     {
       "id": "integration-classwork",
@@ -368,7 +369,37 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-21T04:59:10.024Z"
+      "fetchedAt": "2026-09-21T13:37:57.341Z"
+    },
+    {
+      "id": "reduction-formulae",
+      "url": "https://enoete.github.io/puremathu2_7/",
+      "title": "reduction-formulae",
+      "blurb": "",
+      "number": 4,
+      "status": "live",
+      "tags": [],
+      "accent": "#C62828",
+      "icon": "",
+      "kind": "",
+      "of": "",
+      "meta": {},
+      "fetchedAt": "2026-09-21T13:37:57.399Z"
+    },
+    {
+      "id": "reduction-formulae-classwork",
+      "url": "https://enoete.github.io/puremathu2_8/",
+      "title": "reduction-formulae-classwork",
+      "blurb": "",
+      "number": 4,
+      "status": "live",
+      "tags": [],
+      "accent": "#9A5B00",
+      "icon": "",
+      "kind": "classwork",
+      "of": "reduction-formulae",
+      "meta": {},
+      "fetchedAt": "2026-09-21T13:37:57.480Z"
     }
   ]
 }
