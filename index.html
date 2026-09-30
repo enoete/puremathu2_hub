@@ -327,25 +327,24 @@ function matches(t, q) {
   return hay.includes(q);
 }
 
-// A "classwork"/practice page can carry kind:"classwork" + of:"<parent id>"
-// so the hub nests it as a companion link on its parent's card instead of
-// listing it as its own independent topic — there are only as many real
-// topics as there are chapters, not as many as there are pages.
+// A companion page carries kind:"<something other than empty>" + of:"<parent id>"
+// so the hub nests it as a link on its parent's card instead of listing it as
+// its own independent topic — there are only as many real topics as there are
+// chapters, not as many as there are pages. A parent can have more than one
+// companion (e.g. a classwork set AND a separate interactive drill).
+const COMPANION_LABEL = { classwork: 'Practice', drill: 'Drill' };
 function primaries() {
-  return DATA.topics.filter(t => (t.kind || '') !== 'classwork');
+  return DATA.topics.filter(t => !t.kind);
 }
-function companionOf(id) {
-  return DATA.topics.find(t => t.kind === 'classwork' && t.of === id);
+function companionsOf(id) {
+  return DATA.topics.filter(t => t.kind && t.of === id);
 }
 
 function render() {
   const q = $('#q').value.trim().toLowerCase();
   const groups = primaries();
   const list = groups
-    .filter(t => {
-      const c = companionOf(t.id);
-      return matches(t, q) || (c && matches(c, q));
-    })
+    .filter(t => matches(t, q) || companionsOf(t.id).some(c => matches(c, q)))
     .sort((a, b) => (a.number || 0) - (b.number || 0));
 
   $('#countLabel').textContent = `${list.length} of ${groups.length}`;
@@ -359,10 +358,10 @@ function render() {
     $('#board').innerHTML = `<div class="msg"><b>Nothing matches that</b>Try a different word, or clear the filter.</div>`;
     return;
   }
-  $('#board').innerHTML = list.map(t => card(t, companionOf(t.id))).join('');
+  $('#board').innerHTML = list.map(t => card(t, companionsOf(t.id))).join('');
 }
 
-function card(t, companion) {
+function card(t, companions) {
   const m = t.meta || {};
   const accent = t.accent || 'var(--wire)';
   const live = (t.status || 'live') === 'live';
@@ -373,11 +372,11 @@ function card(t, companion) {
   if (m.questions) facts.push(['k', m.questions + ' questions']);
   if (m.objectives) facts.push(['', m.objectives + ' objectives']);
 
-  const companionLink = companion && companion.url && (companion.status || 'live') === 'live'
-    ? `<a class="go companion" href="${esc(companion.url)}" style="--c-accent:${esc(companion.accent || 'var(--wire)')}">
-        <span class="dot" aria-hidden="true"></span>Practice: ${esc(companion.title)} &rarr;
-      </a>`
-    : '';
+  const companionLinks = (companions || [])
+    .filter(c => c.url && (c.status || 'live') === 'live')
+    .map(c => `<a class="go companion" href="${esc(c.url)}" style="--c-accent:${esc(c.accent || 'var(--wire)')}">
+        <span class="dot" aria-hidden="true"></span>${esc(COMPANION_LABEL[c.kind] || 'Also')}: ${esc(c.title)} &rarr;
+      </a>`).join('');
 
   const inner = `
     <div class="num" style="--accent:${esc(accent)}">${String(t.number).padStart(2, '0')}<small>TOPIC</small></div>
@@ -390,7 +389,7 @@ function card(t, companion) {
         `<span class="tg">${esc(x)}</span>`).join('')}</div>` : ''}
       <div class="actions">
         ${live && t.url ? `<a class="go" href="${esc(t.url)}" style="--accent:${esc(accent)}">Open topic &rarr;</a>` : ''}
-        ${companionLink}
+        ${companionLinks}
       </div>
     </div>`;
 
@@ -417,8 +416,8 @@ function stats() {
   // companion) — it's still material to work through, even though it's
   // grouped under fewer topics.
   const pages = liveGroups.flatMap(t => {
-    const c = companionOf(t.id);
-    return c && (c.status || 'live') === 'live' ? [t, c] : [t];
+    const live = companionsOf(t.id).filter(c => (c.status || 'live') === 'live');
+    return [t, ...live];
   });
   const mins = pages.reduce((s, t) =>
     s + (parseInt(String(t.meta?.duration || '').replace(/\D/g, ''), 10) || 0), 0);
