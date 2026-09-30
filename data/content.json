@@ -36,7 +36,7 @@
       "host": "enoete.github.io"
     }
   ],
-  "generatedAt": "2026-09-30T06:20:02.193Z",
+  "generatedAt": "2026-09-30T06:20:39.214Z",
   "sourceBin": "6ab08678ffd5d160531dc2fb",
   "topicCount": 13,
   "failures": 0,
@@ -99,7 +99,7 @@
         "sections": 8,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T06:19:59.843Z"
+      "fetchedAt": "2026-09-30T06:20:36.486Z"
     },
     {
       "id": "differentiation-classwork",
@@ -148,7 +148,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T06:19:59.920Z"
+      "fetchedAt": "2026-09-30T06:20:36.643Z"
     },
     {
       "id": "partial-fractions",
@@ -209,7 +209,7 @@
         "sections": 9,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T06:20:00.069Z"
+      "fetchedAt": "2026-09-30T06:20:36.868Z"
     },
     {
       "id": "partial-fractions-classwork",
@@ -256,7 +256,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T06:20:00.166Z"
+      "fetchedAt": "2026-09-30T06:20:36.994Z"
     },
     {
       "id": "integration",
@@ -324,7 +324,7 @@
         "sections": 11,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T06:20:00.358Z"
+      "fetchedAt": "2026-09-30T06:20:37.231Z"
     },
     {
       "id": "integration-classwork",
@@ -369,7 +369,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T06:20:00.572Z"
+      "fetchedAt": "2026-09-30T06:20:37.348Z"
     },
     {
       "id": "reduction-formulae",
@@ -425,7 +425,7 @@
         "sections": 9,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T06:20:00.767Z"
+      "fetchedAt": "2026-09-30T06:20:37.677Z"
     },
     {
       "id": "reduction-formulae-classwork",
@@ -470,7 +470,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T06:20:00.841Z"
+      "fetchedAt": "2026-09-30T06:20:37.809Z"
     },
     {
       "id": "trapezium-rule",
@@ -526,7 +526,7 @@
         "sections": 11,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T06:20:01.209Z"
+      "fetchedAt": "2026-09-30T06:20:38.023Z"
     },
     {
       "id": "trapezium-rule-classwork",
@@ -571,7 +571,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T06:20:01.325Z"
+      "fetchedAt": "2026-09-30T06:20:38.287Z"
     },
     {
       "id": "complex-numbers",
@@ -626,7 +626,7 @@
         "sections": 14,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T06:20:01.801Z"
+      "fetchedAt": "2026-09-30T06:20:38.575Z"
     },
     {
       "id": "complex-numbers-classwork",
@@ -673,22 +673,20 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T06:20:01.917Z"
+      "fetchedAt": "2026-09-30T06:20:38.796Z"
     },
     {
       "id": "hunt-the-power",
       "url": "https://enoete.github.io/puremathu2_13/",
       "title": "Hunt the Power",
-      "blurb": "Equate coefficients in partial fractions without expanding everything — tap terms, sort them by power, solve one yourself, then a speed round of eight.",
+      "blurb": "Equate coefficients in partial fractions without expanding everything — spot which term from each bracket can even reach the power you want, then walk two worked examples one decision at a time.",
       "number": 2,
       "status": "live",
       "tags": [
         "Equating coefficients",
         "Term selection",
-        "Column method",
-        "Power finder",
-        "Guided solve",
-        "Cross-checking"
+        "Substituting zeros",
+        "Comparing powers"
       ],
       "accent": "#C81E78",
       "icon": "",
@@ -696,34 +694,29 @@
       "of": "partial-fractions",
       "meta": {
         "title": "Hunt the Power",
-        "description": "Equate coefficients in partial fractions without expanding everything — tap terms, sort them by power, solve one yourself, then a speed round of eight.",
+        "description": "Equate coefficients in partial fractions without expanding everything — spot which term from each bracket can even reach the power you want, then walk two worked examples one decision at a time.",
         "image": "",
         "siteName": "Pure Math Unit 2 · CFBC",
         "themeColor": "#C81E78",
-        "duration": "40 min",
+        "duration": "25 min",
         "difficulty": "Core",
-        "objectives": "6",
-        "questions": "8",
+        "objectives": "3",
+        "questions": "6",
         "topics": [
           "Equating coefficients",
           "Term selection",
-          "Column method",
-          "Power finder",
-          "Guided solve",
-          "Cross-checking"
+          "Substituting zeros",
+          "Comparing powers"
         ],
         "activities": [
-          "Term hunter",
-          "Three-methods comparison",
-          "Drag-and-drop power sort",
-          "Power finder",
-          "Guided self-solve",
-          "Speed quiz"
+          "Term explorer",
+          "Guided walkthroughs",
+          "Self-check quiz"
         ],
-        "sections": 7,
+        "sections": 3,
         "updated": "2026-09-30"
       },
-      "fetchedAt": "2026-09-30T06:20:01.979Z"
+      "fetchedAt": "2026-09-30T06:20:38.893Z"
     }
   ]
 }
