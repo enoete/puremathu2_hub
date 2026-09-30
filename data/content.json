@@ -36,9 +36,9 @@
       "host": "enoete.github.io"
     }
   ],
-  "generatedAt": "2026-09-30T05:09:01.223Z",
+  "generatedAt": "2026-09-30T05:09:58.188Z",
   "sourceBin": "6ab08678ffd5d160531dc2fb",
-  "topicCount": 12,
+  "topicCount": 13,
   "failures": 0,
   "topics": [
     {
@@ -99,7 +99,7 @@
         "sections": 8,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T05:08:59.894Z"
+      "fetchedAt": "2026-09-30T05:09:56.678Z"
     },
     {
       "id": "differentiation-classwork",
@@ -148,7 +148,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T05:08:59.956Z"
+      "fetchedAt": "2026-09-30T05:09:56.744Z"
     },
     {
       "id": "partial-fractions",
@@ -209,7 +209,7 @@
         "sections": 9,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T05:09:00.032Z"
+      "fetchedAt": "2026-09-30T05:09:56.830Z"
     },
     {
       "id": "partial-fractions-classwork",
@@ -256,7 +256,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T05:09:00.111Z"
+      "fetchedAt": "2026-09-30T05:09:56.860Z"
     },
     {
       "id": "integration",
@@ -324,7 +324,7 @@
         "sections": 11,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T05:09:00.273Z"
+      "fetchedAt": "2026-09-30T05:09:56.962Z"
     },
     {
       "id": "integration-classwork",
@@ -369,7 +369,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T05:09:00.330Z"
+      "fetchedAt": "2026-09-30T05:09:57.013Z"
     },
     {
       "id": "reduction-formulae",
@@ -425,7 +425,7 @@
         "sections": 9,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T05:09:00.459Z"
+      "fetchedAt": "2026-09-30T05:09:57.148Z"
     },
     {
       "id": "reduction-formulae-classwork",
@@ -470,7 +470,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T05:09:00.524Z"
+      "fetchedAt": "2026-09-30T05:09:57.199Z"
     },
     {
       "id": "trapezium-rule",
@@ -526,7 +526,7 @@
         "sections": 11,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T05:09:00.660Z"
+      "fetchedAt": "2026-09-30T05:09:57.328Z"
     },
     {
       "id": "trapezium-rule-classwork",
@@ -571,7 +571,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T05:09:00.757Z"
+      "fetchedAt": "2026-09-30T05:09:57.431Z"
     },
     {
       "id": "complex-numbers",
@@ -626,7 +626,7 @@
         "sections": 14,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T05:09:00.979Z"
+      "fetchedAt": "2026-09-30T05:09:57.928Z"
     },
     {
       "id": "complex-numbers-classwork",
@@ -673,7 +673,57 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-09-30T05:09:01.075Z"
+      "fetchedAt": "2026-09-30T05:09:58.008Z"
+    },
+    {
+      "id": "hunt-the-power",
+      "url": "https://enoete.github.io/puremathu2_13/",
+      "title": "Hunt the Power",
+      "blurb": "Equate coefficients in partial fractions without expanding everything — tap terms, sort them by power, solve one yourself, then a speed round of eight.",
+      "number": 2,
+      "status": "live",
+      "tags": [
+        "Equating coefficients",
+        "Term selection",
+        "Column method",
+        "Power finder",
+        "Guided solve",
+        "Cross-checking"
+      ],
+      "accent": "#C81E78",
+      "icon": "",
+      "kind": "drill",
+      "of": "partial-fractions",
+      "meta": {
+        "title": "Hunt the Power",
+        "description": "Equate coefficients in partial fractions without expanding everything — tap terms, sort them by power, solve one yourself, then a speed round of eight.",
+        "image": "",
+        "siteName": "Pure Math Unit 2 · CFBC",
+        "themeColor": "#C81E78",
+        "duration": "40 min",
+        "difficulty": "Core",
+        "objectives": "6",
+        "questions": "8",
+        "topics": [
+          "Equating coefficients",
+          "Term selection",
+          "Column method",
+          "Power finder",
+          "Guided solve",
+          "Cross-checking"
+        ],
+        "activities": [
+          "Term hunter",
+          "Three-methods comparison",
+          "Drag-and-drop power sort",
+          "Power finder",
+          "Guided self-solve",
+          "Speed quiz"
+        ],
+        "sections": 7,
+        "updated": "2026-09-30"
+      },
+      "fetchedAt": "2026-09-30T05:09:58.044Z"
     }
   ]
 }
