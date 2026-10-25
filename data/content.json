@@ -36,7 +36,7 @@
       "host": "enoete.github.io"
     }
   ],
-  "generatedAt": "2026-10-25T13:11:41.547Z",
+  "generatedAt": "2026-10-25T22:33:49.225Z",
   "sourceBin": "6ab08678ffd5d160531dc2fb",
   "topicCount": 13,
   "failures": 0,
@@ -99,7 +99,7 @@
         "sections": 8,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-10-25T13:11:39.602Z"
+      "fetchedAt": "2026-10-25T22:33:46.274Z"
     },
     {
       "id": "differentiation-classwork",
@@ -148,7 +148,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-10-25T13:11:39.705Z"
+      "fetchedAt": "2026-10-25T22:33:46.374Z"
     },
     {
       "id": "partial-fractions",
@@ -209,7 +209,7 @@
         "sections": 9,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-10-25T13:11:39.873Z"
+      "fetchedAt": "2026-10-25T22:33:46.876Z"
     },
     {
       "id": "partial-fractions-classwork",
@@ -256,7 +256,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-10-25T13:11:39.964Z"
+      "fetchedAt": "2026-10-25T22:33:46.969Z"
     },
     {
       "id": "integration",
@@ -324,7 +324,7 @@
         "sections": 11,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-10-25T13:11:40.171Z"
+      "fetchedAt": "2026-10-25T22:33:47.268Z"
     },
     {
       "id": "integration-classwork",
@@ -369,7 +369,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-10-25T13:11:40.271Z"
+      "fetchedAt": "2026-10-25T22:33:47.363Z"
     },
     {
       "id": "reduction-formulae",
@@ -425,7 +425,7 @@
         "sections": 9,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-10-25T13:11:40.417Z"
+      "fetchedAt": "2026-10-25T22:33:47.615Z"
     },
     {
       "id": "reduction-formulae-classwork",
@@ -470,7 +470,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-10-25T13:11:40.521Z"
+      "fetchedAt": "2026-10-25T22:33:47.844Z"
     },
     {
       "id": "trapezium-rule",
@@ -526,7 +526,7 @@
         "sections": 11,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-10-25T13:11:40.698Z"
+      "fetchedAt": "2026-10-25T22:33:48.236Z"
     },
     {
       "id": "trapezium-rule-classwork",
@@ -571,7 +571,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-10-25T13:11:40.804Z"
+      "fetchedAt": "2026-10-25T22:33:48.369Z"
     },
     {
       "id": "complex-numbers",
@@ -626,7 +626,7 @@
         "sections": 14,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-10-25T13:11:41.066Z"
+      "fetchedAt": "2026-10-25T22:33:48.666Z"
     },
     {
       "id": "complex-numbers-classwork",
@@ -673,7 +673,7 @@
         "sections": 3,
         "updated": "2026-09-21"
       },
-      "fetchedAt": "2026-10-25T13:11:41.205Z"
+      "fetchedAt": "2026-10-25T22:33:48.859Z"
     },
     {
       "id": "hunt-the-power",
@@ -716,7 +716,7 @@
         "sections": 3,
         "updated": "2026-09-30"
       },
-      "fetchedAt": "2026-10-25T13:11:41.286Z"
+      "fetchedAt": "2026-10-25T22:33:48.939Z"
     }
   ]
 }
